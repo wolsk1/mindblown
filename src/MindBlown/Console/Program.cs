@@ -16,12 +16,31 @@ namespace Console
             var fx = Math.Cos(3*xValue);
             var gx = xValue;
 
-            var timeStep = 1;
-            var xStep = 1;
+            var timeStep = 0.1;
+            var xStep = 0.01;
+
+            var xMinValue = 0;
+            var xMaxValue = 1;
+            var timeMinValue = 0;
+            var timeMaxValue = 0;
 
             //TODO get tau that is stable
             var tau = HyperbolicEquatation.Tau(constant, timeStep, xStep);
             var isStable = HyperbolicEquatation.IsStable(constant, timeStep, xStep);
+            var valueMatrix = CoreUtils.GenerateValueMatrix(
+                xMinValue,
+                xMaxValue,
+                xStep,
+                timeMinValue,
+                timeMaxValue,
+                timeStep);
+            var resultMatrix = CoreUtils.GenerateResultMatrix(
+                xMinValue,
+                xMaxValue,
+                xStep,
+                timeMinValue,
+                timeMaxValue,
+                timeStep);
 
             //RESULT will be matrix between 0 and some other number
             //Point count will be determined by step values

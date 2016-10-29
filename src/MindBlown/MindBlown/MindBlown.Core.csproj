@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CoreUtils.cs" />
     <Compile Include="DerivedExpression.cs" />
     <Compile Include="DeriveTheories.cs" />
     <Compile Include="HyperbolicEquatation.cs" />
