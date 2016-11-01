@@ -49,6 +49,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MindBlown.Core">
+      <HintPath>..\..\MindBlown\MindBlown\bin\Debug\MindBlown.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="MindBlown.Derive">
+      <HintPath>..\..\MindBlown\MindBlown.Derive\bin\Debug\MindBlown.Derive.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -127,8 +133,11 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Calculator.cs" />
+    <Compile Include="Controllers\CalculationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Domain\Calculation.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

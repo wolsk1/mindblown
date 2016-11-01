@@ -6,11 +6,11 @@ namespace MindBlown
     public static class CoreUtils
     {
         public static double[,] GenerateResultMatrix(
-            int xMin,
-            int xMax,
+            double xMin,
+            double xMax,
             double xStep,
-            int timeMin,
-            int timeMax,
+            double timeMin,
+            double timeMax,
             double timeStep)
         {
             var xValueCount = (xMax - xMin)%xStep;
@@ -21,11 +21,11 @@ namespace MindBlown
         }
 
         public static List<List<double>> GenerateValueMatrix(
-            int xMin,
-            int xMax,
+            double xMin,
+            double xMax,
             double xStep,
-            int timeMin,
-            int timeMax,
+            double timeMin,
+            double timeMax,
             double timeStep)
         {
             var xValueCount = (xMax - xMin) % xStep;
