@@ -23,7 +23,7 @@ namespace Frontend.Domain
         public double TimeMaxValue { get; set; }
 
         public List<List<double>> ValueMatrix { get; set; }
-        public double[,] ResultMatrix { get; set; }
+        public List<List<double>> ResultMatrix { get; set; }
 
         public void Calculate()
         {
@@ -42,6 +42,7 @@ namespace Frontend.Domain
             
             Tau = HyperbolicEquatation.Tau(Constant, TimeStep, XStep);
             IsStable = HyperbolicEquatation.IsStable(Constant, TimeStep, XStep);
+            //TODO matrix is not filled
             ValueMatrix = CoreUtils.GenerateValueMatrix(
                 XMinValue,
                 XMaxValue,
@@ -49,13 +50,14 @@ namespace Frontend.Domain
                 TimeMinValue,
                 TimeMaxValue,
                 TimeStep);
-            ResultMatrix = CoreUtils.GenerateResultMatrix(
-                XMinValue,
-                XMaxValue,
-                XStep,
-                TimeMinValue,
-                TimeMaxValue,
-                TimeStep);
+            ResultMatrix = CoreUtils.GenerateResultMatrix();
+            //ResultMatrix = CoreUtils.GenerateResultMatrix(
+            //    XMinValue,
+            //    XMaxValue,
+            //    XStep,
+            //    TimeMinValue,
+            //    TimeMaxValue,
+            //    TimeStep);
         }
     }
 }

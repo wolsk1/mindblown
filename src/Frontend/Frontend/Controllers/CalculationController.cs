@@ -3,9 +3,11 @@ using Frontend.Domain;
 
 namespace Frontend.Controllers
 {
-    [RoutePrefix("Calculation")]
+    [RoutePrefix("calculation")]
     public class CalculationController : ApiController
     {
+        [HttpGet]
+        [Route("calc")]
         public IHttpActionResult Calculate()
         {
             //TODO provide values
@@ -13,6 +15,7 @@ namespace Frontend.Controllers
 
             calculation.Calculate();
             
+            //TODO multidimensional arrays not supported
             return Ok(calculation);
         }
     }

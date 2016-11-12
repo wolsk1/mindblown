@@ -34,13 +34,13 @@ namespace Console
                 timeMinValue,
                 timeMaxValue,
                 timeStep);
-            var resultMatrix = CoreUtils.GenerateResultMatrix(
-                xMinValue,
-                xMaxValue,
-                xStep,
-                timeMinValue,
-                timeMaxValue,
-                timeStep);
+            //var resultMatrix = CoreUtils.GenerateResultMatrix(
+            //    xMinValue,
+            //    xMaxValue,
+            //    xStep,
+            //    timeMinValue,
+            //    timeMaxValue,
+            //    timeStep);
 
             //RESULT will be matrix between 0 and some other number
             //Point count will be determined by step values
